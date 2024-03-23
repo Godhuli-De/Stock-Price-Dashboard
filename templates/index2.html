@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Stock Price Dashboard</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<script src= "https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="{{url_for('static',filename='script.js')}} " ></script>
+</head>
+<body>
+	
+	<h1>Stock Price Dashboard</h1>
+	
+    <label for="symbolInput">Enter Company Symbol:</label>
+    
+	<form id="add-ticker-form">
+		<input type="text" id="new-ticker" placeholder="Add Ticker e.g., AMZN" required>
+		<button type="submit">Add</button>
+	</form>
+	<!-- Display error message for invalid input -->
+    <span id="error-message" class="error"></span>
+    
+	<p id="timer" > Next update in <span id="counter"></span> seconds.</p>
+	<div id="tickers-grid"></div>
+	
+	
+	
+	<h5>(Copyright of Godhuli De, NYIT)</h5>
+	
+	
+</body>
+</html>
